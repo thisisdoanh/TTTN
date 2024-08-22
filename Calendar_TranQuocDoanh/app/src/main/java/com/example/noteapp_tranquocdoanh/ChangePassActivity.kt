@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_change_pass.*
 
@@ -17,6 +18,7 @@ class ChangePassActivity : AppCompatActivity() {
         val share = getSharedPreferences("PassWord", MODE_PRIVATE)
         val edit = share.edit()
         setUpPassCodeInput()
+        val btnConfirm : Button = findViewById(R.id.btnConfirm)
         btnConfirm.setOnClickListener {
             val pass = input1.text.toString() + input2.text.toString() +
                     input3.text.toString() + input4.text.toString()
